@@ -1,9 +1,9 @@
 require('dotenv').config();
-const { REACT_APP_API_URI, NODE_ENV } = process.env;
+const { REACT_APP_API_URI, REACT_APP_ENV } = process.env;
 
 export default class BinanceDatafeed {
     constructor(options) {
-        this.binanceHost = NODE_ENV === 'production' ? REACT_APP_API_URI : 'http://localhost:3001';
+        this.binanceHost = REACT_APP_ENV ? REACT_APP_API_URI : 'http://localhost:3001';
         this.debug = options.debug || false;
     }
 
