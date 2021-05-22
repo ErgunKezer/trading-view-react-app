@@ -91,8 +91,8 @@ export default class BinanceDatafeed {
                         full_name: symbol.symbol,
                         description: symbol.baseAsset + ' / ' + symbol.quoteAsset,
                         ticker: symbol.symbol,
-                        //exchange: 'Binance',
-                        //type: 'crypto'
+                        exchange: 'Binance',
+                        type: 'crypto',
                     };
                 })
         );
@@ -120,9 +120,6 @@ export default class BinanceDatafeed {
                         name: symbol.symbol,
                         description: symbol.baseAsset + ' / ' + symbol.quoteAsset,
                         ticker: symbol.symbol,
-                        //exchange: 'Binance',
-                        //listed_exchange: 'Binance',
-                        //type: 'crypto',
                         session: '24x7',
                         minmov: 1,
                         pricescale: pricescale(symbol),
