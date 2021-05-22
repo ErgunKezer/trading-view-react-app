@@ -1,6 +1,6 @@
 export default class BinanceDatafeed {
     constructor(options) {
-        this.binanceHost = 'http://localhost:3000/api';
+        this.binanceHost = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : '';
         this.debug = options.debug || false;
     }
 

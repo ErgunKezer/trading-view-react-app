@@ -8,15 +8,11 @@
         "@testing-library/user-event": "^12.1.10",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "react-scripts": "4.0.3",
-        "cors": "^2.8.4",
-        "express": "^4.16.3",
-        "express-http-proxy": "^1.2.0",
-        "morgan": "^1.9.0"
+        "react-scripts": "4.0.3"
     },
     "scripts": {
-        "proxy": "node src/binance-proxy.js",
-        "start": "react-scripts start",
+        "dev": "cross-env NODE_ENV=development react-scripts start",
+        "start": "cross-env NODE_ENV=production react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
